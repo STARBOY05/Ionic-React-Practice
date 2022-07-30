@@ -1,0 +1,12 @@
+.long-cta {
+    /* background: #f5f5dc !important; */
+    background: #002147;
+    color: #ffffff;
+    font-family: 'Montserrat-SB';
+    text-align: center;
+    padding: 20px 20px;
+    border-radius: 10px;
+    width: 90%;
+    margin: 10px 15px;
+    font-size: 15px;
+}

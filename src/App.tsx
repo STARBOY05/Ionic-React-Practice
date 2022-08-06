@@ -1,16 +1,15 @@
-import { IonApp, IonContent } from '@ionic/react';
-import React from 'react';
+import React, { useState } from 'react';
+import { IonApp, IonButton, IonButtons, IonContent, IonHeader, IonModal, IonTitle, IonToolbar } from '@ionic/react';
 import './App.css';
 import Modal from './components/Modal';
-import Test from './components/Test';
+import SearchModal from './components/SeachModal';
 
 function App() {
+
   return (
     <IonApp>
-      <IonContent>
-        <Test />
-        <Modal />
-      </IonContent>
+      {/* <Modal /> */}
+      <SearchModal />
     </IonApp>
   );
 }

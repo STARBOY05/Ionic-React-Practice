@@ -1,4 +1,4 @@
-import { IonAccordion, IonAccordionGroup, IonButton, IonButtons, IonCard, IonCardContent, IonCardSubtitle, IonCol, IonContent, IonFooter, IonHeader, IonIcon, IonInput, IonItem, IonItemDivider, IonLabel, IonList, IonModal, IonPage, IonRow, IonTitle, IonToast, IonToggle, IonToolbar } from '@ionic/react'
+import { IonAccordion, IonAccordionGroup, IonButton, IonButtons, IonCard, IonCardContent, IonCardSubtitle, IonCol, IonContent, IonFooter, IonHeader, IonIcon, IonInput, IonItem, IonItemDivider, IonLabel, IonList, IonLoading, IonModal, IonPage, IonRow, IonTitle, IonToast, IonToggle, IonToolbar } from '@ionic/react'
 import React, { useState } from 'react'
 import { settingsOutline, createOutline } from "ionicons/icons";
 import './Modal.css'
@@ -43,6 +43,9 @@ function Modal() {
     }
     const [text, setText] = useState<string>();
     // ---
+
+    const [showLoading, setShowLoading] = useState(false);
+
     return (
         <IonPage>
             <IonHeader>
@@ -118,7 +121,6 @@ function Modal() {
                     </IonCol>
                 </IonRow>
                 {/* <IonButton onClick={() => setShowToast1(true)} expand="block">Show Toast 1</IonButton> */}
-                {/* <IonButton onClick={() => setShowToast2(true)} expand="block">Show Toast 2</IonButton> */}
                 {/* <IonToast
                     isOpen={showToast1}
                     onDidDismiss={() => setShowToast1(false)}
@@ -126,28 +128,6 @@ function Modal() {
                     duration={200}
                 />
 
-                <IonToast
-                    isOpen={showToast2}
-                    onDidDismiss={() => setShowToast2(false)}
-                    message="Are you sure you want to save the changes?"
-                    position="bottom"
-                    buttons={[
-                        {
-                            side: 'start',
-                            text: 'Discard',
-                            handler: () => {
-                                console.log('Favorite clicked');
-                            }
-                        },
-                        {
-                            side: 'end',
-                            text: 'Save Changes',
-                            handler: () => {
-                                console.log('Cancel clicked');
-                            }
-                        }
-                    ]}
-                /> */}
                 {/* <IonItem style={{ marginTop: "15px", width: "95%", fontFamily: "Montserrat-SB" }}>
                     <IonInput type="text" placeholder="Change Name" value={changeName} onIonChange={(e: any) => { setChangeName(e.target.value) }}></IonInput>
                     {editName ? (
@@ -252,12 +232,16 @@ function Modal() {
                         </IonItem>
                     </IonAccordion>
                 </IonAccordionGroup>
+                <IonButton onClick={() => setShowLoading(true)}>Show Loading</IonButton>
+                <IonLoading
+                    cssClass='my-custom-class'
+                    isOpen={showLoading}
+                    onDidDismiss={() => setShowLoading(false)}
+                    duration={5000}
+                    spinner={null}
+                />
             </IonContent>
 
-            <IonItemDivider>Input with clear button when there is a value</IonItemDivider>
-            <IonItem>
-                <IonInput value={text} placeholder="Enter Input" onIonChange={e => setText(e.detail.value!)} clearInput></IonInput>
-            </IonItem>
         </IonPage >
     )
 }

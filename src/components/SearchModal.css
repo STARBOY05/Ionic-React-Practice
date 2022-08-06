@@ -1,0 +1,42 @@
+.search-area {
+    width: 100%;
+    height: 100vh;
+    background-color: lightcyan;
+    display: flex;
+}
+
+.category-area {
+    display: flex;
+    align-items: center;
+    flex-direction: column;
+    width: 20%;
+    height: 100vh;
+    background-color: #fff;
+    padding: 10px;
+}
+
+.category {
+    display: flex;
+    justify-content: space-around;
+    align-items: center;
+    flex-direction: column;
+    text-align: center;
+    margin: 5px 0;
+    height: 90px;
+}
+
+.category img {
+    width: 150px;
+    border-radius: 50%;
+}
+
+.trending-area {
+    width: 80%;
+    height: 100vh;
+}
+
+.trending-area .trend-img {
+    height: 75px;
+    width: 100%;
+    border-radius: 10px;
+}

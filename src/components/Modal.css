@@ -10,3 +10,14 @@
     margin: 10px 15px;
     font-size: 15px;
 }
+
+.my-custom-class {
+    --background: url("../logo.svg");
+    --spinner: null;
+    color: #1c6dff;
+}
+
+ion-loading.my-custom-class  {
+    --background: url("../logo.svg");
+    color: #1c6dff;
+}

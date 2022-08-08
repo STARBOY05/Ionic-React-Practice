@@ -4,6 +4,7 @@ import './App.css';
 import Modal from './components/Modal';
 import SearchModal from './components/SeachModal';
 import Ioncard from './components/Ioncard';
+import Ioncard2 from './components/Ioncard2';
 
 function App() {
 
@@ -11,7 +12,8 @@ function App() {
     <IonApp>
       {/* <Modal /> */}
       {/* <SearchModal /> */}
-      <Ioncard />
+      {/* <Ioncard /> */}
+      <Ioncard2 />
     </IonApp>
   );
 }

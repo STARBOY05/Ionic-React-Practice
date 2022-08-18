@@ -13,7 +13,8 @@ function App() {
       {/* <Modal /> */}
       {/* <SearchModal /> */}
       {/* <Ioncard /> */}
-      <Ioncard2 />
+      {/* <Ioncard2 /> */}
+      <Ioncard />
     </IonApp>
   );
 }

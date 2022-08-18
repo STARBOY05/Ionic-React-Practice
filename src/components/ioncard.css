@@ -23,9 +23,26 @@
   grid-template-columns: 1fr 1fr;
   gap: 20px;
 }
-.dabutton{
+
+.dabutton {
   padding: 10px 20px;
 }
+
 .dabutton:focus {
   background-color: yellow;
+}
+
+.pickInterestCard {
+  display: flex;
+  justify-content: space-around;
+  align-items: center;
+  background-color: gold;
+  box-shadow: 0 0 5px 0;
+  text-align: center;
+  height: 150px;
+  margin: 10px;
+}
+
+.scale {
+  transform: scale(0.8);
 }
